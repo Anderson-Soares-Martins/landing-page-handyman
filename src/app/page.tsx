@@ -17,26 +17,39 @@ import { Separator } from "@/components/ui/separator";
 import { ArrowRight } from "lucide-react";
 import antes from "@/assets/antes.png";
 import depois from "@/assets/depois.png";
+import { useTheme } from "next-themes";
+import clsx from "clsx";
 
 export default function Home() {
   const [isHovered, setIsHovered] = useState(false);
+  const { theme } = useTheme();
 
   const depoimentos = [
     {
       quote:
-        "O serviço do Marido de Aluguel salvou minha cozinha! Rápido e eficiente.",
-      name: "Ana Silva",
-      title: "Cliente Satisfeita"
+        "Ótimo profissional, fez a instalação do suporte super bem! Mesmo com os problemas do próprio produto ele fez a instalação.",
+      name: "Fernanda T."
     },
     {
-      quote: "Profissionalismo e qualidade em cada reparo. Recomendo muito!",
-      name: "Carlos Santos",
-      title: "Proprietário de Imóveis"
+      quote: "Muito atencioso e fez exatamente o que precisávamos!",
+      name: "Mirele F."
     },
     {
-      quote: "Finalmente encontrei alguém confiável para cuidar da minha casa.",
-      name: "Mariana Oliveira",
-      title: "Moradora do Centro"
+      quote: "Excelente serviço, muito prestativo, cuidadoso e gente boa!",
+      name: "Marcos R."
+    },
+    {
+      quote:
+        "Realizou o serviço dentro do horário programado e bem feito. Recomendo!",
+      name: "Roger P."
+    },
+    {
+      quote: "Profissional excelente e respeitoso, super indico.",
+      name: "Katiely"
+    },
+    {
+      quote: "Excelente serviço prestado, atencioso e educado.",
+      name: "Geovani"
     }
   ];
 
@@ -60,10 +73,11 @@ export default function Home() {
   ];
 
   return (
-    <main className="bg-background transition-bg">
-      <div className="shadow-move"></div>
+    <main className="bg-background transition-bg ">
       <div className="w-full flex flex-col flex-1 mt-[60px] items-center pt-10">
-        <section className="min-h-screen flex flex-col items-center text-center text-foreground px-6 relative">
+        <section className="min-h-screen w-full flex flex-col items-center text-center text-foreground px-6 relative">
+          <div className="shadow-red"></div>
+          <div className="shadow-blue"></div>
           {/* Seção Hero */}
           <Image
             src={logo.src}
@@ -72,7 +86,14 @@ export default function Home() {
             height={80}
             className="cursor-pointer"
           />
-          <h1 className="text-3xl md:text-5xl font-extrabold">ANDERSON</h1>
+          <h1
+            className={clsx(
+              "text-3xl md:text-5xl font-extrabold",
+              theme !== "dark" && "text-background"
+            )}
+          >
+            ANDERSON
+          </h1>
           <h2 className="text-secondary text-base md:text-lg font-lora tracking-widest">
             PEQUENOS REPAROS E INSTALAÇÕES
           </h2>
@@ -81,7 +102,7 @@ export default function Home() {
             {servicos.map((servico, index) => (
               <Link href={servico.link} key={index}>
                 <motion.div
-                  className="bg-white text-black flex items-center p-6 rounded-lg shadow-white shadow-sm text-center cursor-pointer gap-x-6"
+                  className="bg-foreground text-primary-foreground flex items-center p-6 rounded-lg shadow-white shadow-sm text-center cursor-pointer gap-x-6"
                   whileHover={{
                     scale: 1.01,
                     boxShadow: "0px 5px 20px rgba(255, 255, 255, 0.6)"
@@ -92,22 +113,26 @@ export default function Home() {
                     <Image
                       src={servico.icon}
                       alt="Logo"
-                      width={50}
-                      height={50}
-                      className="cursor-pointer"
+                      width={40}
+                      height={40}
+                      className={`cursor-pointer ${
+                        theme === "dark" ? "" : "invert"
+                      }`}
                     />
                     <Separator
                       orientation="vertical"
                       className="h-[50px] mx-3"
                     />
-                    <h3 className="text-xl font-semibold">{servico.nome}</h3>
+                    <h3 className="text-lg font-semibold">{servico.nome}</h3>
                   </div>
                   <ArrowRight />
                 </motion.div>
               </Link>
             ))}
+            <Button className="mt-10 p-10 w-full col-span-1 md:col-span-2">
+              Agende um Serviço
+            </Button>
           </div>
-          <Button className="mt-10 p-10 w-full">Agende um Serviço</Button>
         </section>
 
         {/* Grade de Serviços */}
@@ -138,8 +163,7 @@ export default function Home() {
             >
               <h3 className="text-xl font-semibold">Experiência Comprovada</h3>
               <p className="text-muted-foreground mt-4">
-                Nossa equipe tem anos de experiência em diversos tipos de
-                reparos domésticos, garantindo um serviço de qualidade.
+                Experiência e qualidade em varios tipos de reparos
               </p>
             </motion.div>
             <motion.div
@@ -172,7 +196,7 @@ export default function Home() {
         </section>
 
         {/* Seção CTA */}
-        <section className="relative overflow-hidden text-foreground w-full text-center py-96">
+        <section className="relative overflow-hidden text-white w-full text-center py-96">
           <Vortex>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Resolva Seus Problemas Domésticos Hoje Mesmo
@@ -192,8 +216,8 @@ export default function Home() {
         </section>
 
         {/* Seção de Depoimentos */}
-        <section className="w-full  py-40 bg-background text-foreground text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-10">
+        <section className="w-full  pb-40 bg-background text-foreground ">
+          <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center">
             O Que Nossos Clientes Dizem
           </h2>
           <InfiniteMovingCards

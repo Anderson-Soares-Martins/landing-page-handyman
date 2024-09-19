@@ -7,13 +7,14 @@
 
   @layer base {
     :root {
-      --background: 241 87% 93%;
+      --background: 36 68% 83%;
       --foreground: 20 14.3% 4.1%;
       --card: 0 0% 100%;
       --card-foreground: 20 14.3% 4.1%;
       --popover: 0 0% 100%;
       --popover-foreground: 20 14.3% 4.1%;
       --primary: 216 73% 56%;
+      --red-shadow: 0 92% 50%;
       --primary-foreground: 60 9.1% 97.8%;
       --secondary: 23 67% 51%;
       --secondary-foreground: 24 9.8% 10%;
@@ -42,6 +43,7 @@
       --popover: 20 14.3% 4.1%;
       --popover-foreground: 60 9.1% 97.8%;
       --primary: 216 73% 56%;
+      --red-shadow: 0 92% 50%;
       --primary-foreground: 24 9.8% 10%;
       --secondary: 23 67% 51%;
       --secondary-foreground: 60 9.1% 97.8%;
@@ -72,9 +74,9 @@
   }
 
     /* HeroCards background shadow */
-    .shadow-move {
+    .shadow-blue {
       position: absolute;
-      background: hsl(var(--primary) / 40%);
+      background: hsl(var(--primary) / 50%);
       border-radius: 24px;
       z-index: 0;
     
@@ -84,7 +86,23 @@
 
 
       top: 50%;
-      left: 50%;
+      left: 0;
       transform: translate(-50%, -50%);
+    }
+
+    .shadow-red {
+      position: absolute;
+      background: hsl(var(--red-shadow) / 50%);
+      border-radius: 24px;
+      z-index: 0;
+    
+      width: 400px;
+      height: 300px;
+      filter: blur(150px);
+
+
+      top: 50%;
+      right: 0;
+      transform: translate(50%, -50%);
     }
     
