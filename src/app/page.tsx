@@ -22,7 +22,6 @@ import clsx from "clsx";
 
 export default function Home() {
   const [isHovered, setIsHovered] = useState(false);
-  const { theme } = useTheme();
 
   const depoimentos = [
     {
@@ -86,12 +85,7 @@ export default function Home() {
             height={80}
             className="cursor-pointer"
           />
-          <h1
-            className={clsx(
-              "text-3xl md:text-5xl font-extrabold",
-              theme !== "dark" && "text-background"
-            )}
-          >
+          <h1 className={clsx("text-3xl md:text-5xl font-extrabold")}>
             ANDERSON
           </h1>
           <h2 className="text-secondary text-base md:text-lg font-lora tracking-widest">
@@ -102,10 +96,10 @@ export default function Home() {
             {servicos.map((servico, index) => (
               <Link href={servico.link} key={index}>
                 <motion.div
-                  className="bg-foreground text-primary-foreground flex items-center p-6 rounded-lg shadow-white shadow-sm text-center cursor-pointer gap-x-6"
+                  className="bg-white text-black flex items-center px-6 py-4 rounded-lg shadow-foreground shadow-sm text-center cursor-pointer gap-x-6"
                   whileHover={{
                     scale: 1.01,
-                    boxShadow: "0px 5px 20px rgba(255, 255, 255, 0.6)"
+                    boxShadow: "0px 5px 20px rgb(99, 99, 99)"
                   }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -115,9 +109,7 @@ export default function Home() {
                       alt="Logo"
                       width={40}
                       height={40}
-                      className={`cursor-pointer ${
-                        theme === "dark" ? "" : "invert"
-                      }`}
+                      className="cursor-pointer"
                     />
                     <Separator
                       orientation="vertical"
@@ -129,7 +121,7 @@ export default function Home() {
                 </motion.div>
               </Link>
             ))}
-            <Button className="mt-10 p-10 w-full col-span-1 md:col-span-2">
+            <Button className="mt-10 py-4 w-full col-span-1 md:col-span-2">
               Agende um Serviço
             </Button>
           </div>
@@ -206,7 +198,7 @@ export default function Home() {
               serviço.
             </p>
             <motion.button
-              className="px-6 py-3 bg-background text-foreground text-lg font-semibold rounded-md hover:bg-secondary transition-all"
+              className="px-6 py-3 bg-white text-black text-lg font-semibold rounded-md hover:bg-secondary transition-all"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -225,7 +217,7 @@ export default function Home() {
             direction="left"
             speed="normal"
             pauseOnHover={true}
-            className="mx-10"
+            className="md:mx-10"
           />
         </section>
       </div>
