@@ -94,7 +94,7 @@ export const InfiniteMovingCards = ({
             }}
             key={item.name}
           >
-            <blockquote>
+            <blockquote className="flex flex-col justify-between h-full">
               <div
                 aria-hidden="true"
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
