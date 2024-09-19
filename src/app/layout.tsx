@@ -7,9 +7,9 @@ import Footer from "@/components/Footer";
 import { inter } from "@/app/ui/fonts";
 
 export const metadata: Metadata = {
-  title: "Img to 3d",
+  title: "Anderson - PEQUENOS REPAROS E INSTALAÇÕES",
   description:
-    "Our platform uses cutting-edge AI technology to convert your 2D images into high-quality 3D models. Easy, fast, and precise."
+    " Resolvemos qualquer problema na sua casa com rapidez e qualidade. Do encanamento à elétrica!"
 };
 
 export default function RootLayout({
