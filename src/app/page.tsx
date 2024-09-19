@@ -73,9 +73,9 @@ export default function Home() {
   ];
 
   return (
-    <main className="bg-background transition-bg ">
+    <main className="bg-background transition-bg">
       <div className="w-full flex flex-col flex-1 mt-[60px] items-center pt-10">
-        <section className="min-h-screen w-full flex flex-col items-center text-center text-foreground px-6 relative">
+        <section className="min-h-screen w-full flex flex-col items-center text-center text-foreground px-6 relative overflow-hidden">
           <div className="shadow-red"></div>
           <div className="shadow-blue"></div>
           {/* Seção Hero */}
