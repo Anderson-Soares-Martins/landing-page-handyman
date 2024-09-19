@@ -1,101 +1,214 @@
+"use client";
+
+import { useState } from "react";
+import { Compare } from "@/components/ui/compare";
+import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
+import { Vortex } from "@/components/ui/vortex";
+import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo_construtor.webp";
+import iconEletrica from "@/assets/icon-eletrica.webp";
+import iconHidraulica from "@/assets/icon-hidraulica.webp";
+import iconInstalacao from "@/assets/icon-instalacao.webp";
+import iconManutencao from "@/assets/icon-manutencao.webp";
+import { Separator } from "@/components/ui/separator";
+import { ArrowRight } from "lucide-react";
+import antes from "@/assets/antes.png";
+import depois from "@/assets/depois.png";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [isHovered, setIsHovered] = useState(false);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+  const depoimentos = [
+    {
+      quote:
+        "O serviço do Marido de Aluguel salvou minha cozinha! Rápido e eficiente.",
+      name: "Ana Silva",
+      title: "Cliente Satisfeita"
+    },
+    {
+      quote: "Profissionalismo e qualidade em cada reparo. Recomendo muito!",
+      name: "Carlos Santos",
+      title: "Proprietário de Imóveis"
+    },
+    {
+      quote: "Finalmente encontrei alguém confiável para cuidar da minha casa.",
+      name: "Mariana Oliveira",
+      title: "Moradora do Centro"
+    }
+  ];
+
+  const servicos = [
+    {
+      nome: "Hidráulica",
+      icon: iconHidraulica.src,
+      link: "/servicos/hidraulica"
+    },
+    { nome: "Elétrica", icon: iconEletrica.src, link: "/servicos/eletrica" },
+    {
+      nome: "Intalação de aparelhos",
+      icon: iconInstalacao.src,
+      link: "/servicos/instacoes"
+    },
+    {
+      nome: "Manutenção Residencial",
+      icon: iconManutencao.src,
+      link: "/servicos/manutencao"
+    }
+  ];
+
+  return (
+    <main className="bg-background transition-bg">
+      <div className="shadow-move"></div>
+      <div className="w-full flex flex-col flex-1 mt-[60px] items-center pt-10">
+        <section className="min-h-screen flex flex-col items-center text-center text-foreground px-6 relative">
+          {/* Seção Hero */}
           <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src={logo.src}
+            alt="Logo"
+            width={80}
+            height={80}
+            className="cursor-pointer"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+          <h1 className="text-3xl md:text-5xl font-extrabold">ANDERSON</h1>
+          <h2 className="text-secondary text-base md:text-lg font-lora tracking-widest">
+            PEQUENOS REPAROS E INSTALAÇÕES
+          </h2>
+          <p className="text-lg md:text-xl mt-4 max-w-3xl text-center">
+            Resolvemos qualquer problema na sua casa com rapidez e qualidade. Do
+            encanamento à elétrica!
+          </p>
+          <Button className="text-foreground mt-10">Agende um Serviço</Button>
+
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-8 max-w-4xl mx-auto z-10 mb-20">
+            {servicos.map((servico, index) => (
+              <Link href={servico.link} key={index}>
+                <motion.div
+                  className="bg-white text-black flex items-center p-6 rounded-lg shadow-white shadow-sm text-center cursor-pointer gap-x-6"
+                  whileHover={{
+                    scale: 1.01,
+                    boxShadow: "0px 5px 20px rgba(255, 255, 255, 0.6)"
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <div className="flex-1 flex items-center">
+                    <Image
+                      src={servico.icon}
+                      alt="Logo"
+                      width={50}
+                      height={50}
+                      className="cursor-pointer"
+                    />
+                    <Separator
+                      orientation="vertical"
+                      className="h-[50px] mx-3"
+                    />
+                    <h3 className="text-xl font-semibold">{servico.nome}</h3>
+                  </div>
+                  <ArrowRight />
+                </motion.div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* Grade de Serviços */}
+        <section className="flex pb-20 flex-col w-full items-center text-secondary-foreground px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
+            Antes e Depois
+          </h2>
+          <Compare
+            slideMode="drag"
+            firstImage={antes.src}
+            secondImage={depois.src}
+            className="mt-12 w-full max-w-xl rounded-lg shadow-2xl opacity-80"
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+        </section>
+
+        {/* Seção de Características */}
+        <section className="text-foreground px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
+            Por Que Escolher Nosso Marido de Aluguel?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <motion.div
+              className="bg-card p-6 rounded-lg shadow-sm text-card-foreground text-center"
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0px 10px 20px rgba(0,0,0,0.1)"
+              }}
+            >
+              <h3 className="text-xl font-semibold">Experiência Comprovada</h3>
+              <p className="text-muted-foreground mt-4">
+                Nossa equipe tem anos de experiência em diversos tipos de
+                reparos domésticos, garantindo um serviço de qualidade.
+              </p>
+            </motion.div>
+            <motion.div
+              className="bg-card p-6 rounded-lg shadow-sm text-card-foreground text-center"
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0px 10px 20px rgba(0,0,0,0.1)"
+              }}
+            >
+              <h3 className="text-xl font-semibold">Atendimento Rápido</h3>
+              <p className="text-muted-foreground mt-4">
+                Estamos sempre prontos para atender suas emergências. Chegamos
+                rapidamente para resolver seu problema.
+              </p>
+            </motion.div>
+            <motion.div
+              className="bg-card p-6 rounded-lg shadow-sm text-card-foreground text-center"
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0px 10px 20px rgba(0,0,0,0.1)"
+              }}
+            >
+              <h3 className="text-xl font-semibold">Preço Justo</h3>
+              <p className="text-muted-foreground mt-4">
+                Oferecemos orçamentos transparentes e preços competitivos, sem
+                surpresas desagradáveis no final do serviço.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Seção CTA */}
+        <section className="relative overflow-hidden text-foreground w-full text-center py-96">
+          <Vortex>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Resolva Seus Problemas Domésticos Hoje Mesmo
+            </h2>
+            <p className="text-lg md:text-xl mb-6">
+              Entre em contato e receba um orçamento gratuito para o seu
+              serviço.
+            </p>
+            <motion.button
+              className="px-6 py-3 bg-background text-foreground text-lg font-semibold rounded-md hover:bg-secondary transition-all"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Solicitar Orçamento
+            </motion.button>
+          </Vortex>
+        </section>
+
+        {/* Seção de Depoimentos */}
+        <section className="w-full  py-40 bg-background text-foreground text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-10">
+            O Que Nossos Clientes Dizem
+          </h2>
+          <InfiniteMovingCards
+            items={depoimentos}
+            direction="left"
+            speed="normal"
+            pauseOnHover={true}
+            className="mx-10"
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        </section>
+      </div>
+    </main>
   );
 }
