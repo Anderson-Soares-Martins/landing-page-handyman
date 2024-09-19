@@ -76,11 +76,6 @@ export default function Home() {
           <h2 className="text-secondary text-base md:text-lg font-lora tracking-widest">
             PEQUENOS REPAROS E INSTALAÇÕES
           </h2>
-          <p className="text-lg md:text-xl mt-4 max-w-3xl text-center">
-            Resolvemos qualquer problema na sua casa com rapidez e qualidade. Do
-            encanamento à elétrica!
-          </p>
-          <Button className="text-foreground mt-10">Agende um Serviço</Button>
 
           <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-8 max-w-4xl mx-auto z-10 mb-20">
             {servicos.map((servico, index) => (
@@ -112,6 +107,7 @@ export default function Home() {
               </Link>
             ))}
           </div>
+          <Button className="mt-10 p-10 w-full">Agende um Serviço</Button>
         </section>
 
         {/* Grade de Serviços */}
