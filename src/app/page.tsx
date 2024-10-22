@@ -235,8 +235,8 @@ export default function Home() {
         </section>
 
         {/* Seção CTA */}
-        <section className="h-[40rem] rounded-md dark:bg-indigo-900 bg-indigo-500 flex flex-col items-center justify-center relative w-full my-20">
-          <div className="relative flex flex-col items-center justify-center text-center z-10 text-white">
+        <section className="h-[40rem] rounded-md dark:bg-indigo-900 bg-blue-200 flex flex-col items-center justify-center relative w-full my-20">
+          <div className="relative flex flex-col items-center justify-center text-center z-10 dark:text-white text-black">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 ">
               Resolva Seus Problemas Domésticos Hoje Mesmo
             </h2>
@@ -245,7 +245,7 @@ export default function Home() {
               serviço.
             </p>
             <motion.button
-              className="px-6 py-3 bg-white text-black text-lg font-semibold rounded-md hover:bg-secondary transition-all"
+              className="px-6 py-3 bg-white text-black hover:text-white text-lg font-semibold rounded-md hover:bg-secondary transition-all"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

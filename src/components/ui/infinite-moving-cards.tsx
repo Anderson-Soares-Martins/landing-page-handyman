@@ -87,8 +87,8 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <li
-            className="w-[200px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-indigo-700 px-4 py-6 md:w-[450px]
-            bg-gradient-to-b from-indigo-700 to-indigo-600 dark:from-indigo-950 dark:to-indigo-900 dark:border-indigo-700 dark:bg-indigo
+            className="w-[200px] max-w-full relative rounded-2xl border border-b-[1px] flex-shrink-0 border-blue-400 px-4 py-6 md:w-[450px]
+            bg-gradient-to-b from-blue-200 to-blue-100 dark:from-indigo-950 dark:to-indigo-900 dark:border-indigo-700 dark:bg-indigo
             "
             key={item.name}
           >
@@ -97,12 +97,12 @@ export const InfiniteMovingCards = ({
                 aria-hidden="true"
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
               ></div>
-              <span className="relative z-20 text-sm leading-[1.6] text-white font-normal">
+              <span className="relative z-20 text-sm leading-[1.6] dark:text-white text-black font-normal">
                 {item.quote}
               </span>
               <div className="relative z-20 mt-6 flex flex-row items-center">
                 <span className="flex flex-col gap-1">
-                  <span className=" text-sm leading-[1.6] text-white/90 font-normal">
+                  <span className=" text-sm leading-[1.6] dark:text-white/90 text-black font-normal">
                     {item.name}
                   </span>
                   <span className="flex items-center space-x-1 text-yellow-500">
