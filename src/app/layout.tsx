@@ -35,6 +35,7 @@ export default function RootLayout({
               href={generateWhatsappLink(
                 "Opa amigo, tudo bem? Gostaria de agendar um serviço!"
               )}
+passHref
             >
               <PulsatingButton>
                 <FaWhatsapp size={32} />
