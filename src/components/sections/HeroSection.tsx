@@ -44,7 +44,7 @@ export const HeroSection = () => {
             href={generateWhatsappLink(
               "Opa amigo, tudo bem? Gostaria de agendar um serviço!"
             )}
-            prefetch={false}
+            target="_blank"
           >
             <Button className="px-9 py-7 mt-4 text-xl text-white bg-indigo-500 dark:bg-indigo-300 rounded-full hover:bg-indigo-600 dark:hover:bg-indigo-400 focus:outline-none ">
               Agendar Serviço

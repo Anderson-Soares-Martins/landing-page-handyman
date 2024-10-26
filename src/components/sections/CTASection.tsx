@@ -20,7 +20,7 @@ export const CTASection = () => {
           href={generateWhatsappLink(
             "Opa amigo, tudo bem? Gostaria de fazer um orçamento"
           )}
-          prefetch={false}
+          target="_blank"
         >
           <motion.button
             className="px-6 py-3  text-white bg-indigo-500 dark:bg-indigo-300 rounded-full hover:bg-indigo-600 dark:hover:bg-indigo-400 focus:outline-none focus:ring-4 focus:ring-indigo-300"
