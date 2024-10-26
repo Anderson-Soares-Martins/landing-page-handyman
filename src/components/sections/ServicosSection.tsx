@@ -14,38 +14,42 @@ export const ServicosSection = () => {
   const servicos = [
     {
       nome: "Hidráulica",
+      hash: "hidraulica",
       descricao: "Pequeno reparos e instalações hidráulicas",
       icon: <Wrench size={32} />,
       img: imgHidraulica,
-      link: "/servicos/hidraulica"
+      link: "/servicos"
     },
     {
       nome: "Elétrica",
+      hash: "eletrica",
       descricao: "Pequenos reparos e instalações elétricas",
       icon: <Zap size={32} />,
       img: imgEletrica,
-      link: "/servicos/eletrica"
+      link: "/servicos"
     },
     {
-      nome: "Intalação",
+      nome: "Instalação",
+      hash: "instalacao",
       descricao: "Instalação de aparelhos eletrônicos e eletrodomésticos",
       icon: <Gamepad2 size={32} />,
       img: imgInstalacao,
-      link: "/servicos/instacoes"
+      link: "/servicos"
     },
     {
       nome: "Manutenção",
+      hash: "manutencao",
       descricao: "Pequenos reparos e manutenção residencial",
       icon: <Drill size={32} />,
       img: imgManutencao,
-      link: "/servicos/manutencao"
+      link: "/servicos"
     }
   ];
   return (
     <Spotlight className="mx-auto grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 px-7 items-start lg:max-w-none group">
       {servicos.map((servico, index) => (
         <SpotlightCard key={index}>
-          <div className="relative h-full dark:bg-indigo-950 bg-white p-8 pb-10 rounded-[inherit] z-20 overflow-hidden">
+          <div className="relative h-full dark:bg-indigo-950 bg-white p-8 pb-10 rounded-[inherit] z-20 overflow-hidden shadow-lg dark:shadow-2xl">
             <div className="absolute top-0 left-0 w-full h-[35%]">
               <div
                 className="absolute inset-0 dark:bg-slate-900 bg-gray-100 rounded-t-lg z-10 dark:opacity-50 opacity-30"
@@ -84,7 +88,7 @@ export const ServicosSection = () => {
               </div>
               <Link
                 className="inline-flex items-center justify-center px-6 py-4 text-sm font-medium text-gray-800 transition-colors duration-150 bg-gray-200 rounded-full hover:bg-gray-400 dark:bg-slate-800 dark:text-slate-300 dark:border-slate-700 dark:hover:bg-slate-900 focus:outline-none focus:ring focus:ring-indigo-300"
-                href={servico.link}
+                href={`${servico.link}/#${servico.hash.toLowerCase()}`}
               >
                 <Pointer size={16} className="mr-2" />
                 <span>Conheça os serviços</span>

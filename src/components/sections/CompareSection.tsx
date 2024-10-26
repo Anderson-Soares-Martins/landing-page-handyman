@@ -1,6 +1,6 @@
 import { Compare } from "@/components/ui/compare";
-import antes from "@/assets/antes.png";
-import depois from "@/assets/depois.png";
+import antes from "@/assets/antes.webp";
+import depois from "@/assets/depois.webp";
 
 export const CompareSection = () => {
   return (

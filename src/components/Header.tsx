@@ -32,10 +32,10 @@ export default function Header() {
           <div className="w-1/2 md:ml-auto md:mr-auto font-4 pt-1 pl-1 flex flex-wrap items-center md:text-base text-1xl md:justify-center justify-items-start">
             <nav>
               <Button variant="ghost" asChild>
-                <Link href="/about">HOME</Link>
+                <Link href="/">HOME</Link>
               </Button>
               <Button variant="ghost" asChild>
-                <Link href="/about">SERVIÇOS</Link>
+                <Link href="/servicos">SERVIÇOS</Link>
               </Button>
               <Button variant="ghost" asChild>
                 <Link href="/about">SOBRE</Link>

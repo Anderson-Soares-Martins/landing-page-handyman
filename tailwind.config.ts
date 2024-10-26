@@ -101,14 +101,19 @@ const config = {
   				to: {
   					transform: 'translate(calc(-50% - 0.5rem))'
   				}
-  			}
+  			},
+				pulse: {
+          "0%, 100%": { boxShadow: "0 0 0 0 var(--pulse-color)" },
+          "50%": { boxShadow: "0 0 0 8px var(--pulse-color)" },
+        },
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out',
   			'aurora': 'aurora 60s linear infinite',
-  			'scroll': 'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite'
-  		}
+  			'scroll': 'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
+        'pulse': 'pulse var(--duration) ease-out infinite',
+      }
   	}
   },
   plugins: [require("tailwindcss-animate"), addVariablesForColors],
