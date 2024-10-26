@@ -113,6 +113,7 @@ export default function Page() {
               href={generateWhatsappLink(
                 "Opa amigo, tudo bem? Gostaria de agendar um serviço!"
               )}
+              prefetch={false}
             >
               <button className="w-full mt-4 px-6 py-3 rounded-b-lg font-semibold text-white bg-indigo-600 dark:bg-indigo-400  hover:bg-indigo-700 dark:hover:bg-indigo-500 focus:outline-none focus:ring-4 focus:ring-indigo-300">
                 Faça seu orçamento
@@ -129,6 +130,7 @@ export default function Page() {
           href={generateWhatsappLink(
             "Opa amigo, tudo bem? Gostaria de fazer um orçamento"
           )}
+          prefetch={false}
         >
           <button className="px-6 py-3 font-semibold text-white bg-indigo-600 dark:bg-indigo-400 rounded-full hover:bg-indigo-700 dark:hover:bg-indigo-500 focus:outline-none focus:ring-4 focus:ring-indigo-300">
             Faça seu orçamento sem compromisso
