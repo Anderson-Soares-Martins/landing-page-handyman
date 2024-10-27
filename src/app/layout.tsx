@@ -25,7 +25,7 @@ export const metadata: Metadata = {
       "Especialistas em pequenos reparos e instalações para sua casa, do encanamento à elétrica.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "./assets/logo.webp",
         width: 1200,
         height: 630,
         alt: "Anderson Reparos - Confiável e eficiente"
