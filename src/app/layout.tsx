@@ -83,7 +83,7 @@ export const metadata: Metadata = {
     capable: true
   },
   verification: {
-    google: "YOUR_GOOGLE_VERIFICATION_CODE",
+    google: "Ut7pBPdX9A7dzb75s6eUrM6mKTwxoQOcjWhAumvP7ZU",
     other: {
       "msvalidate.01": "YOUR_BING_VERIFICATION_CODE",
       "facebook-domain-verification": "YOUR_FACEBOOK_VERIFICATION_CODE"
