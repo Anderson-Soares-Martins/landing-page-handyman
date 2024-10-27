@@ -23,7 +23,7 @@ export const CTASection = () => {
           target="_blank"
         >
           <motion.button
-            className="px-6 py-3  text-white bg-indigo-500 dark:bg-indigo-300 rounded-full hover:bg-indigo-600 dark:hover:bg-indigo-400 focus:outline-none focus:ring-4 focus:ring-indigo-300"
+            className="px-8 py-5 text-xl font-bold text-white bg-indigo-500 dark:bg-indigo-300 rounded-full hover:bg-indigo-600 dark:hover:bg-indigo-400 focus:outline-none focus:ring-4 focus:ring-indigo-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

@@ -13,7 +13,7 @@ import { generateWhatsappLink } from "@/utils";
 export const metadata: Metadata = {
   title: "Anderson - PEQUENOS REPAROS E INSTALAÇÕES",
   description:
-    " Resolvemos qualquer problema na sua casa com rapidez e qualidade. Do encanamento à elétrica!"
+    "Resolvemos qualquer problema na sua casa com rapidez e qualidade. Do encanamento à elétrica!"
 };
 
 export default function RootLayout({
@@ -26,7 +26,7 @@ export default function RootLayout({
       <body
         className={`${inter.className} antialiased flex flex-col min-h-screen custom-scroll`}
       >
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <Header />
           {children}
           <Analytics />

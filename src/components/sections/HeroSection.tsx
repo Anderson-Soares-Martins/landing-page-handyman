@@ -46,7 +46,7 @@ export const HeroSection = () => {
             )}
             target="_blank"
           >
-            <Button className="px-9 py-7 mt-4 text-xl text-white bg-indigo-500 dark:bg-indigo-300 rounded-full hover:bg-indigo-600 dark:hover:bg-indigo-400 focus:outline-none ">
+            <Button className="px-9 py-7 mt-4 text-xl text-white bg-indigo-500 rounded-full hover:bg-indigo-700 focus:outline-none ">
               Agendar Serviço
             </Button>
           </Link>
