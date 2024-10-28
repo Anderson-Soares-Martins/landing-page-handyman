@@ -13,6 +13,9 @@ import { generateWhatsappLink } from "@/utils";
 export const metadata: Metadata = {
   metadataBase: new URL("https://andersonreparos.com.br"),
   title: "Anderson Reparos - Serviços Domésticos em Palhoça e Região",
+  alternates: {
+    canonical: "https://andersonreparos.com.br"
+  },
   description:
     "Serviços rápidos e de qualidade em elétrica, hidráulica e manutenções gerais para sua casa em Palhoça, SC e arredores.",
   category: "Serviços de Reparos e Instalações",
