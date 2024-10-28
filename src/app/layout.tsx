@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     url: "https://andersonreparos.com.br",
     title: "Anderson Reparos - Serviços Domésticos em Palhoça e Região",
     description:
-      "Especialistas em pequenos reparos e instalações para sua casa, do encanamento à elétrica.",
+      "Especialistas em pequenos reparos e instalações para sua casa.",
     images: [
       {
         url: "./assets/logo.webp",
@@ -41,6 +41,7 @@ export const metadata: Metadata = {
     "serviços domésticos",
     "Palhoça",
     "SC",
+    "Instalação de ",
     "conserto de móveis",
     "troca de disjuntores",
     "reparo de fiação elétrica",
@@ -83,11 +84,7 @@ export const metadata: Metadata = {
     capable: true
   },
   verification: {
-    google: "Ut7pBPdX9A7dzb75s6eUrM6mKTwxoQOcjWhAumvP7ZU",
-    other: {
-      "msvalidate.01": "YOUR_BING_VERIFICATION_CODE",
-      "facebook-domain-verification": "YOUR_FACEBOOK_VERIFICATION_CODE"
-    }
+    google: "Ut7pBPdX9A7dzb75s6eUrM6mKTwxoQOcjWhAumvP7ZU"
   }
 };
 

@@ -4,57 +4,6 @@ import Link from "next/link";
 import { Drill, Gamepad2, Pointer, Wrench, Zap } from "lucide-react";
 import { useEffect } from "react";
 import { generateWhatsappLink } from "@/utils";
-import { Metadata } from "next";
-
-// export const metadata: Metadata = {
-//   title: "Serviços - Anderson Reparos",
-//   description:
-//     "Serviços rápidos e de qualidade em elétrica, hidráulica e manutenções gerais para sua casa em Palhoça, SC e arredores.",
-//   keywords: [
-//     "reparos",
-//     "manutenção",
-//     "elétrica",
-//     "hidráulica",
-//     "instalações",
-//     "serviços domésticos",
-//     "Palhoça",
-//     "SC",
-//     "conserto de móveis",
-//     "troca de disjuntores",
-//     "reparo de fiação elétrica",
-//     "instalação de ventilador de teto",
-//     "instalação de TV",
-//     "instalação de fechadura digital",
-//     "reparo de vazamentos",
-//     "instalação de torneira",
-//     "instalação de chuveiro",
-//     "instalação de luminária",
-//     "instalação de suporte de prateleira",
-//     "manutenção de telhado",
-//     "reparos elétricos em residência",
-//     "serviços hidráulicos em casa",
-//     "conserto e manutenção residencial",
-//     "instalação de eletrodomésticos",
-//     "serviços de instalação de purificador de água",
-//     "reparos em telhado",
-//     "instalação de aparelhos eletrônicos",
-//     "pequenos reparos em móveis",
-//     "conserto de bomba d'água",
-//     "troca de maçanetas e fechaduras",
-//     "instalação de cabo de rede",
-//     "instalação de chuveiro em Palhoça",
-//     "conserto de bomba d'água em Palhoça",
-//     "reparos hidráulicos em Palhoça",
-//     "instalação de TV na parede em Palhoça",
-//     "manutenção de telhado em Palhoça",
-//     "instalação de suporte para prateleira em Palhoça",
-//     "reparo de fiação elétrica em Palhoça",
-//     "instalação de luminárias em Palhoça",
-//     "conserto de móveis em Palhoça",
-//     "serviços de eletricista em Palhoça",
-//     "troca de fechadura em Palhoça"
-//   ]
-// };
 
 export default function Page() {
   useEffect(() => {
@@ -129,9 +78,15 @@ export default function Page() {
 
   return (
     <section className="w-full">
-      <h1 className="text-3xl font-bold text-center mb-10 text-indigo-600 dark:text-indigo-400">
+      <h1 className="text-3xl font-bold text-center mb-5 text-indigo-600 dark:text-indigo-400">
         Nossos Serviços
       </h1>
+      <div className="text-center mb-10">
+        <p className="text-gray-700 dark:text-slate-400 text-lg">
+          Conheça todos os serviços de reparos e instalações, para a sua casa na
+          região de Palhoça, SC.
+        </p>
+      </div>
       <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 px-6">
         {todosServicos.map((servico, index) => (
           <div
@@ -144,12 +99,12 @@ export default function Page() {
                 {servico.icon}
               </div>
               <div>
-                <h1 className="text-2xl font-semibold text-gray-800 dark:text-slate-200">
+                <h2 className="text-2xl font-semibold text-gray-800 dark:text-slate-200">
                   {servico.categoria}
-                </h1>
-                <h2 className="text-sm text-gray-600 dark:text-slate-400">
-                  {servico.descricao}
                 </h2>
+                <h1 className="text-sm text-gray-600 dark:text-slate-400">
+                  {servico.descricao}
+                </h1>
               </div>
             </div>
             <ul className="list-disc ml-6 text-gray-700 dark:text-slate-300 space-y-2 px-6 flex-1">

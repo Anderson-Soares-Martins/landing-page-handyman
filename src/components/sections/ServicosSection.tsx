@@ -18,7 +18,14 @@ export const ServicosSection = () => {
       descricao: "Pequeno reparos e instalações hidráulicas",
       icon: <Wrench size={32} />,
       img: imgHidraulica,
-      link: "/servicos"
+      link: "/servicos",
+      servicos: [
+        "Reparo de vazamentos em torneiras e canos",
+        "Instalação de torneiras e chuveiros",
+        "Reparo em bombas d'água",
+        "Reparo em registro",
+        "Aquecedor de água"
+      ]
     },
     {
       nome: "Elétrica",
@@ -26,7 +33,14 @@ export const ServicosSection = () => {
       descricao: "Pequenos reparos e instalações elétricas",
       icon: <Zap size={32} />,
       img: imgEletrica,
-      link: "/servicos"
+      link: "/servicos",
+      servicos: [
+        "Instalação de tomadas e interruptores",
+        "Reparo de fiação elétrica",
+        "Troca de disjuntores",
+        "Instalação de luminárias e lustres",
+        "Instalação de ventiladores de teto"
+      ]
     },
     {
       nome: "Instalação",
@@ -34,7 +48,16 @@ export const ServicosSection = () => {
       descricao: "Instalação de aparelhos eletrônicos e eletrodomésticos",
       icon: <Gamepad2 size={32} />,
       img: imgInstalacao,
-      link: "/servicos"
+      link: "/servicos",
+      servicos: [
+        "Fechadura digital",
+        "Instalação de TV",
+        "Máquina de lavar roupa",
+        "Máquina de lavar louça",
+        "Suportes e prateleiras",
+        "Purificadores de água",
+        "Cabo de rede"
+      ]
     },
     {
       nome: "Manutenção",
@@ -42,7 +65,13 @@ export const ServicosSection = () => {
       descricao: "Pequenos reparos e manutenção residencial",
       icon: <Drill size={32} />,
       img: imgManutencao,
-      link: "/servicos"
+      link: "/servicos",
+      servicos: [
+        "Reparo de móveis e objetos domésticos",
+        "Fixação de quadros e prateleiras",
+        "Troca de fechaduras e maçanetas",
+        "Reparo de vazamentos em telhados"
+      ]
     }
   ];
   return (
