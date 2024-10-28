@@ -18,7 +18,7 @@ export const HeroSection = () => {
         <Image
           src={bgHero}
           alt="Imagem de fundo representando serviços de reparo e instalações"
-          layout="fill"
+          fill
           className="object-cover object-center"
           priority
         />
