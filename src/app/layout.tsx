@@ -15,10 +15,25 @@ export const metadata: Metadata = {
   title: "Anderson Reparos - Serviços Domésticos em Palhoça e Região",
   description:
     "Serviços rápidos e de qualidade em elétrica, hidráulica e manutenções gerais para sua casa em Palhoça, SC e arredores.",
+  category: "Serviços de Reparos e Instalações",
+  icons: [
+    {
+      url: "./assets/logo.webp",
+      sizes: "192x192",
+      type: "image/webp"
+    },
+    {
+      url: "./assets/logo.webp",
+      sizes: "192x192",
+      type: "image/webp"
+    }
+  ],
   openGraph: {
-    siteName: "Anderson Reparos",
+    siteName: "Anderson Pequenos Reparos e Instalações",
     type: "website",
     locale: "pt_BR",
+    countryName: "Brasil",
+    phoneNumbers: ["+5548999652972"],
     url: "https://andersonreparos.com.br",
     title: "Anderson Reparos - Serviços Domésticos em Palhoça e Região",
     description:

@@ -9,7 +9,6 @@ import imgEletrica from "@/assets/img-eletrica.webp";
 import imgHidraulica from "@/assets/img-hidraulica.webp";
 import imgInstalacao from "@/assets/img-instalacao.webp";
 import imgManutencao from "@/assets/img-manutencao.webp";
-
 export const ServicosSection = () => {
   const servicos = [
     {
