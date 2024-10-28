@@ -21,12 +21,7 @@ export const metadata: Metadata = {
   category: "Serviços de Reparos e Instalações",
   icons: [
     {
-      url: "./assets/logo.webp",
-      sizes: "192x192",
-      type: "image/webp"
-    },
-    {
-      url: "./assets/logo.webp",
+      url: "../assets/logo.webp",
       sizes: "192x192",
       type: "image/webp"
     }
@@ -43,7 +38,7 @@ export const metadata: Metadata = {
       "Especialistas em pequenos reparos e instalações para sua casa.",
     images: [
       {
-        url: "./assets/logo.webp",
+        url: "../assets/logo.webp",
         width: 1200,
         height: 630,
         alt: "Anderson Reparos - Confiável e eficiente"
