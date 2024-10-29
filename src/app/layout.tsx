@@ -9,6 +9,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { PulsatingButton } from "@/components/ui/PulsationButton";
 import Link from "next/link";
 import { generateWhatsappLink } from "@/utils";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://andersonreparos.com.br"),
@@ -130,6 +131,12 @@ export const metadata: Metadata = {
   }
 };
 
+declare global {
+  interface Window {
+    dataLayer: any[];
+  }
+}
+
 export default function RootLayout({
   children
 }: Readonly<{
@@ -137,6 +144,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <Head>
+        {/* Google Tag (gtag.js) */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16755974704"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-16755974704');
+        `
+          }}
+        />
+      </Head>
       <body
         className={`${inter.className} antialiased flex flex-col min-h-screen custom-scroll`}
       >
