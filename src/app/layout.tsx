@@ -144,7 +144,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <Head>
+      <head>
         {/* Google Tag (gtag.js) */}
         <script
           async
@@ -160,7 +160,7 @@ export default function RootLayout({
         `
           }}
         />
-      </Head>
+      </head>
       <body
         className={`${inter.className} antialiased flex flex-col min-h-screen custom-scroll`}
       >
