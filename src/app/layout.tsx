@@ -22,9 +22,9 @@ export const metadata: Metadata = {
   category: "Serviços de Reparos e Instalações",
   icons: [
     {
-      url: "../assets/logo.webp",
-      sizes: "192x192",
-      type: "image/webp"
+      url: "/favicon.ico",
+      sizes: "any",
+      type: "image/x-icon"
     }
   ],
   openGraph: {
@@ -145,6 +145,8 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" type="image/x-icon" />
+        <link rel="icon" href="../assets/logo.webp" type="image/webp" />
         {/* Google Tag (gtag.js) */}
         <script
           async
